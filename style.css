@@ -1,0 +1,245 @@
+/* ===== Variables : change la couleur d'accent ici ===== */
+:root {
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --bg: #0b1220;
+  --bg-alt: #101a2e;
+  --card: #15213a;
+  --border: rgba(148, 163, 184, 0.18);
+  --text: #e2e8f0;
+}
+
+[data-bs-theme="light"] {
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --bg: #ffffff;
+  --bg-alt: #f1f5f9;
+  --card: #ffffff;
+  --border: rgba(15, 23, 42, 0.12);
+  --text: #0f172a;
+}
+
+/* ===== Base ===== */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.accent { color: var(--accent); }
+.py-6 { padding-top: 6rem; padding-bottom: 6rem; }
+.section-alt { background: var(--bg-alt); }
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* Les ancres ne passent pas sous la navbar */
+section { scroll-margin-top: 70px; }
+
+/* ===== Boutons ===== */
+.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04121f;
+  font-weight: 600;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #04121f;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar .nav-link { color: var(--text); opacity: 0.75; font-weight: 500; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: var(--accent); opacity: 1; }
+.navbar-brand { color: var(--text); font-size: 1.4rem; }
+
+/* ===== Accueil ===== */
+.hero {
+  min-height: 100vh;
+  min-height: 100svh; /* évite le saut de la barre d'adresse sur mobile */
+  padding-top: 90px;
+  padding-bottom: 3rem;
+  background:
+    radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 45%),
+    var(--bg);
+}
+.cursor { animation: blink 1s steps(1) infinite; color: var(--accent); }
+@keyframes blink { 50% { opacity: 0; } }
+
+.profile-img {
+  width: min(320px, 70vw);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+}
+.social { color: var(--text); opacity: 0.8; transition: 0.2s; }
+.social:hover { color: var(--accent); opacity: 1; transform: translateY(-3px); }
+
+/* ===== Listes d'infos ===== */
+.info-list li { margin-bottom: 0.9rem; display: flex; gap: 0.75rem; align-items: center; }
+.info-list a { color: var(--text); text-decoration: none; }
+.info-list a:hover { color: var(--accent); }
+
+/* ===== Cartes ===== */
+.skill-card,
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: transform 0.25s, border-color 0.25s;
+  overflow: hidden;
+}
+.skill-card:hover,
+.project-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+
+.project-card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; }
+
+.tag {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  font-weight: 500;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+/* Filtre de projets */
+.project { transition: opacity 0.3s, transform 0.3s; }
+.project.is-hidden { display: none; }
+#projectSearch { max-width: 32rem; }
+
+/* ===== Parcours (timeline) ===== */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border);
+  max-width: 760px;
+}
+.timeline-item { position: relative; margin-bottom: 2.5rem; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem - 7px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.timeline-date { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+
+/* ===== Formulaire ===== */
+.form-control {
+  background: var(--card);
+  border-color: var(--border);
+  color: var(--text);
+}
+.form-control:focus {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* ===== Footer & retour en haut ===== */
+.footer { border-color: var(--border) !important; }
+
+#toTop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 46px;
+  height: 46px;
+  display: none;
+  z-index: 1030;
+}
+#toTop.show { display: inline-flex; align-items: center; justify-content: center; }
+
+/* ===== Responsive ===== */
+
+/* Typographie fluide : s'adapte à la largeur sans point de rupture */
+.hero h1 { font-size: clamp(2rem, 6vw + 0.5rem, 3.5rem); }
+.hero .lead { font-size: clamp(1rem, 1.2vw + 0.7rem, 1.25rem); }
+.section-title { font-size: clamp(1.6rem, 3vw + 1rem, 2.25rem); }
+
+/* Évite les débordements horizontaux (emails, liens longs) */
+.info-list li,
+.card-body { overflow-wrap: anywhere; }
+img { max-width: 100%; height: auto; }
+
+/* Cibles tactiles confortables (min. ~44px) */
+.btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; }
+.btn-sm { min-height: 38px; }
+
+/* Très grands écrans (> 1600px) */
+@media (min-width: 1600px) {
+  .container { max-width: 1440px; }
+  html { font-size: 17px; }
+}
+
+/* Tablettes et petits laptops (< 992px) : menu replié */
+@media (max-width: 991.98px) {
+  .navbar-collapse { padding: 0.75rem 0 1rem; }
+  .navbar .nav-link { padding: 0.75rem 0; }
+  .hero { text-align: center; }
+  .hero .d-flex { justify-content: center; }
+  .section-title::after { left: 50%; transform: translateX(-50%); }
+  .section-title { text-align: center; }
+  #filters { justify-content: center; }
+}
+
+/* Tablettes portrait et mobiles (< 768px) */
+@media (max-width: 767.98px) {
+  .py-6 { padding-top: 4rem; padding-bottom: 4rem; }
+  .timeline { padding-left: 1.5rem; }
+  .timeline-item::before { left: calc(-1.5rem - 7px); }
+}
+
+/* Petits mobiles (< 480px) : boutons pleine largeur */
+@media (max-width: 479.98px) {
+  .hero .btn-lg { width: 100%; }
+  .py-6 { padding-top: 3.25rem; padding-bottom: 3.25rem; }
+  #toTop { right: 0.75rem; bottom: 0.75rem; }
+}
+
+/* Mobile en mode paysage (écran très bas) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 80px; padding-bottom: 2rem; }
+  .profile-img { width: 180px; }
+}
+
+/* Encoches et barres système (iPhone, etc.) */
+#toTop { bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
+.navbar { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+
+/* Respect des préférences d'animation réduite */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}

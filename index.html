@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biagou Marc Aurel Élisée | Portfolio</title>
+  <meta name="description" content="Portfolio de Biagou Marc Aurel Élisée, étudiant en Licence 2 Génie Logiciel à l'Institut Ivoirien de Technologie (IIT), Côte d'Ivoire. Sites web, applications mobiles Flutter et applications de gestion.">
+
+  <!-- Bootstrap 5.3 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ton CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="90" tabindex="0">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#accueil">BIAGOU Marc-Aurel<span class="accent">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary" type="button" aria-label="Changer de thème">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== ACCUEIL ===== -->
+    <section id="accueil" class="hero d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="text-uppercase small fw-semibold accent mb-2">Bienvenue sur mon portfolio</p>
+            <h1 class="display-4 fw-bold mb-3">Salut, je suis <span class="accent">BIAGOU Marc-Aurel</span>.</h1>
+            <p class="lead text-secondary mb-4">
+              Étudiant en Génie Logiciel à l'IIT, je conçois des sites web et des applications
+              <span id="typed" class="fw-semibold"></span><span class="cursor">|</span>
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#projets" class="btn btn-accent btn-lg">Voir mes projets</a>
+              <a href="cv.pdf" class="btn btn-outline-secondary btn-lg" download>
+                <i class="bi bi-download me-1"></i> Télécharger mon CV
+              </a>
+            </div>
+            <div class="d-flex gap-3 mt-4 fs-4">
+              <a href="https://github.com/marcbiagou52-max" target="_blank" rel="noopener" aria-label="GitHub" class="social"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/marc-aurele-biagou-9412b438b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social"><i class="bi bi-linkedin"></i></a>
+              <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=marcbiagou52%40gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center order-first order-lg-last">
+            <!-- Remplace par ta photo : photo.jpg (carrée, idéalement WebP) -->
+            <img src="biagou2026-11-17 at 12.44.49 AM.jpeg" alt="Portrait de Biagou Marc Aurel Élisée" class="profile-img shadow-lg" width="320" height="320"
+                 onerror="this.src='biagou2026-11-17 at 12.44.49 AM.jpeg'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section id="apropos" class="py-6">
+      <div class="container">
+        <h2 class="section-title">À propos</h2>
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <p>
+              Je suis étudiant en Licence 2 Génie Logiciel à l'<strong>Institut Ivoirien de Technologie (IIT)</strong>,
+              à Grand-Bassam. Je me passionne pour la technologie et la finance, et je développe des sites web,
+              des applications mobiles et des applications de gestion.
+            </p>
+            <p>
+              J'aime les projets concrets, un code propre et une interface soignée, avec une sensibilité de designer
+              issue de mes créations graphiques (affiches, logos, identité visuelle).
+            </p>
+            <p class="mb-0">
+              Sportif, j'applique au travail d'équipe la même discipline et la même persévérance.
+              Je suis actuellement à la recherche d'un <strong>stage ou d'une alternance</strong> en développement.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <ul class="list-unstyled info-list">
+              <li><i class="bi bi-geo-alt-fill accent"></i> Grand-Bassam, Côte d'Ivoire</li>
+              <li><i class="bi bi-mortarboard-fill accent"></i> Licence 2 Génie Logiciel, IIT</li>
+              <li><i class="bi bi-translate accent"></i> Français (langue de travail), Anglais</li>
+              <li><i class="bi bi-envelope-fill accent"></i> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=marcbiagou52%40gmail.com" target="_blank" rel="noopener">marcbiagou52@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <section id="competences" class="py-6 section-alt">
+      <div class="container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h3 class="h5"><i class="bi bi-code-slash accent me-2"></i>Web</h3>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <span class="badge tag">HTML5</span>
+                  <span class="badge tag">CSS3</span>
+                  <span class="badge tag">Bootstrap 5</span>
+                  <span class="badge tag">JavaScript</span>
+                  <span class="badge tag">Sites vitrines</span>
+                  <span class="badge tag">Django (en cours)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h3 class="h5"><i class="bi bi-phone accent me-2"></i>Mobile</h3>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <span class="badge tag">Flutter</span>
+                  <span class="badge tag">Dart</span>
+                  
+                  <span class="badge tag">Firebase</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h3 class="h5"><i class="bi bi-window-desktop accent me-2"></i>Applications de bureau</h3>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <span class="badge tag">C#</span>
+                  <span class="badge tag">Windows Forms</span>
+                  <span class="badge tag">Applications de gestion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h3 class="h5"><i class="bi bi-database accent me-2"></i>Données &amp; autres</h3>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <span class="badge tag">MySQL</span>
+                  <span class="badge tag">Python</span>
+                  <span class="badge tag">Web scraping</span>
+                  <span class="badge tag">Git / GitHub</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h3 class="h5"><i class="bi bi-palette accent me-2"></i>Design</h3>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <span class="badge tag">Logos</span>
+                  <span class="badge tag">Affiches</span>
+                  <span class="badge tag">Identité visuelle</span>
+                </div>
+                <div class="mt-3 d-flex align-items-center gap-3">
+                  <img src="image/Image%202026-11-23%20at%201.53.42%20PM.jpeg" alt="Affiche promotionnelle du salon Chez Mima" width="48" loading="lazy" class="rounded">
+                  <div>
+                    <p class="small mb-1">Création d’une affiche promotionnelle pour Chez Mima, valorisant ses prestations de coiffure et ses offres grâce à un visuel coloré et attractif.</p>
+                    <span class="badge tag">Canva</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Retire "Git / GitHub" si tu ne l'utilises pas, ajoute tes outils de design (Photoshop, Canva...) -->
+      </div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section id="projets" class="py-6">
+      <div class="container">
+        <h2 class="section-title">Projets</h2>
+
+        <label for="projectSearch" class="visually-hidden">Rechercher un projet</label>
+        <input type="search" class="form-control mb-3" id="projectSearch" placeholder="Rechercher un projet..." aria-label="Rechercher un projet">
+
+        <!-- Filtres -->
+        <div class="d-flex flex-wrap gap-2 mb-4" id="filters">
+          <button class="btn btn-sm btn-accent" data-filter="all">Tous</button>
+          <button class="btn btn-sm btn-outline-secondary" data-filter="web">Web</button>
+          <button class="btn btn-sm btn-outline-secondary" data-filter="mobile">Mobile</button>
+          <button class="btn btn-sm btn-outline-secondary" data-filter="desktop">Bureau</button>
+          <button class="btn btn-sm btn-outline-secondary" data-filter="data">Données &amp; Python</button>
+          <button class="btn btn-sm btn-outline-secondary" data-filter="design">Design</button>
+        </div>
+
+        <div class="row g-4" id="projectGrid">
+
+          <!-- FlowTime -->
+          <div class="col-md-6 col-lg-4 project" data-category="mobile">
+            <div class="card project-card h-100">
+              <img src="images/flowtime.jpg" class="card-img-top" alt="Capture d'écran de FlowTime" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=FlowTime'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">FlowTime</h3>
+                <p class="text-secondary small">Application de productivité multiplateforme pour étudiants et professionnels, avec cahier des charges complet et Clean Architecture.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">Flutter</span><span class="badge tag">Riverpod</span><span class="badge tag">Firebase</span><span class="badge tag">GoRouter</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="#" class="btn btn-sm btn-accent" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Démo</a>
+                  <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal-Flash -->
+          <div class="col-md-6 col-lg-4 project" data-category="web">
+            <div class="card project-card h-100">
+              <img src="images/deal-flash.jpg" class="card-img-top" alt="Capture d'écran de Deal-Flash" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Deal-Flash'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Deal-Flash</h3>
+                <p class="text-secondary small">Site web de bons plans et promotions pour la Côte d'Ivoire et les marchés africain et européen.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">HTML</span><span class="badge tag">CSS</span><span class="badge tag">JavaScript</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="#" class="btn btn-sm btn-accent" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Démo</a>
+                  <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestion de trésorerie -->
+          <div class="col-md-6 col-lg-4 project" data-category="desktop data">
+            <div class="card project-card h-100">
+              <img src="images/tresorerie.jpg" class="card-img-top" alt="Capture d'écran de l'application de gestion de trésorerie" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Tr%C3%A9sorerie'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Gestion de trésorerie</h3>
+                <p class="text-secondary small">Projet académique (Base de données II, IIT) : comptes, mouvements (recettes et dépenses) et centres d'imputation analytique. J'ai réalisé la partie interface.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">C#</span><span class="badge tag">Windows Forms</span><span class="badge tag">MySQL</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestion d'université -->
+          <div class="col-md-6 col-lg-4 project" data-category="desktop data">
+            <div class="card project-card h-100">
+              <img src="image/IIT Paysage.jpg" class="card-img-top" alt="Capture d'écran de l'application de gestion d'université" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Universit%C3%A9'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Gestion d'université</h3>
+                <p class="text-secondary small">Application de bureau de gestion universitaire, réalisée dans le cadre de ma formation à l'IIT.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">C#</span><span class="badge tag">Windows Forms</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="https://github.com/marcbiagou52-max/GestionUniversite" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gestion de bibliothèque -->
+          <div class="col-md-6 col-lg-4 project" data-category="data">
+            <div class="card project-card h-100">
+              <img src="image/OIP.v2lNTXac6WUA8TDDi0-u4AHaEN.webp" class="card-img-top" alt="Aperçu du projet de gestion de bibliothèque" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Biblioth%C3%A8que'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Gestion de bibliothèque</h3>
+                <p class="text-secondary small">Application console pour gérer un catalogue de livres et d'exemplaires, les membres, les emprunts, les retours et les statistiques.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">Python</span><span class="badge tag">MySQL</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="https://github.com/marcbiagou52-max/gestion_bibliotheque-" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trajet Plus -->
+          <div class="col-md-6 col-lg-4 project" data-category="desktop">
+            <div class="card project-card h-100">
+              <img src="image/11 PM.jpeg" class="card-img-top" alt="Capture d'écran de Trajet Plus" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Trajet+Plus'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Trajet Plus</h3>
+                <!-- À PRÉCISER : description, technologies, et ajuste data-category (desktop, web, mobile) -->
+                <p class="text-secondary small">Application réalisée dans le cadre de ma formation à l'IIT. [Description à compléter]</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">[Technologies]</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+          <!-- Web scraping Amazon -->
+          <div class="col-md-6 col-lg-4 project" data-category="data">
+            <div class="card project-card h-100">
+              <img src="images/scraping.jpg" class="card-img-top" alt="Aperçu du projet de web scraping" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Web+scraping'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Web scraping Amazon</h3>
+                <p class="text-secondary small">Application console qui recherche des produits sur Amazon.fr, enregistre leurs informations dans une base SQLite et permet de consulter ou d'exporter les résultats.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">Python</span><span class="badge tag">Selenium</span><span class="badge tag">SQLite</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="https://github.com/marcbiagou52-max/amazon_scraper" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analyse comparative de marché -->
+          <div class="col-md-6 col-lg-4 project" data-category="data">
+            <div class="card project-card h-100">
+              <img src="images/analyse-comparative.jpg" class="card-img-top" alt="Aperçu du projet d'analyse comparative de marché" loading="lazy"
+                   onerror="this.src='https://placehold.co/600x380/1e293b/94a3b8?text=Analyse+comparative'">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Analyse comparative de marché</h3>
+                <p class="text-secondary small">Outil Python qui compare les prix de produits électroniques et électroménagers de trois enseignes fictives à Abidjan, avec recherche de produits et analyse de l'historique des prix.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge tag">Python</span><span class="badge tag">Pandas</span><span class="badge tag">Openpyxl</span>
+                </div>
+                <div class="mt-auto d-flex gap-2">
+                  <a href="https://github.com/marcbiagou52-max/ANALYSE-COMPARATIVE" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+        </div>
+        <!-- Pour ajouter un projet : copie un bloc "col-md-6 col-lg-4 project" et change data-category -->
+      </div>
+    </section>
+
+    <!-- ===== PARCOURS ===== -->
+    <section id="parcours" class="py-6 section-alt">
+      <div class="container">
+        <h2 class="section-title">Parcours</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span class="timeline-date">Année 2026-2027 – Aujourd'hui</span>
+            <h3 class="h5 mb-1">Licence 2 Génie Logiciel, Institut Ivoirien de Technologie (IIT)</h3>
+            <p class="text-secondary mb-0">Grand-Bassam. Projets en développement web, mobile, applications de gestion et bases de données.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-date">Année 2024-2025</span>
+            <h3 class="h5 mb-1">Baccalauréat série Scientifique</h3>
+            <p class="text-secondary mb-0">Lycée Moderne 1 de Grand-Bassam.</p>
+          </div>
+
+        </div>
+        <!-- Corrige les dates et ajoute d'autres blocs "timeline-item" si besoin -->
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-6">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <p>Un projet, une opportunité de stage ou d'alternance, ou simplement une question ? Écris-moi, je réponds rapidement.</p>
+            <ul class="list-unstyled info-list">
+              <li><i class="bi bi-envelope-fill accent"></i> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=marcbiagou52%40gmail.com" target="_blank" rel="noopener">marcbiagou52@gmail.com</a></li>
+              <li><i class="bi bi-github accent"></i> <a href="https://github.com/marcbiagou52-max" target="_blank" rel="noopener">github.com/marcbiagou52-max</a></li>
+              <li><i class="bi bi-linkedin accent"></i> <a href="https://www.linkedin.com/in/marc-aurele-biagou-9412b438b/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <!-- Crée un compte sur formspree.io (ou web3forms.com), puis remplace l'URL dans action -->
+            <form id="contactForm" action="https://formspree.io/f/TON_ID" method="POST" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nom" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="nom" name="nom" required>
+                  <div class="invalid-feedback">Indique ton nom.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                  <div class="invalid-feedback">Indique un email valide.</div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                  <div class="invalid-feedback">Écris ton message.</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-accent btn-lg">Envoyer</button>
+                  <span id="formStatus" class="ms-3" role="status"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-4 text-center text-secondary small border-top footer">
+    <div class="container">
+      © <span id="year"></span> Biagou Marc Aurel Élisée. 
+    </div>
+  </footer>
+
+  <!-- Bouton retour en haut -->
+  <button id="toTop" class="btn btn-accent rounded-circle" type="button" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
