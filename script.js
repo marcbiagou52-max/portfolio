@@ -4,6 +4,7 @@ const themeBtn = document.getElementById("themeToggle");
 
 function applyTheme(theme) {
   root.setAttribute("data-bs-theme", theme);
+  themeBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
   themeBtn.innerHTML =
     theme === "dark"
       ? '<i class="bi bi-moon-stars-fill"></i>'
@@ -102,6 +103,17 @@ form.addEventListener("submit", async (e) => {
   }
 
   try {
+    if (form.action.startsWith("mailto:")) {
+      const subject = encodeURIComponent("Contact depuis le portfolio");
+      const body = encodeURIComponent(
+        `Nom: ${form.elements.nom.value}\nEmail: ${form.elements.email.value}\n\n${form.elements.message.value}`
+      );
+      statusEl.textContent = "Votre logiciel de messagerie va s'ouvrir.";
+      statusEl.classList.add("text-success");
+      window.location.href = `mailto:marcbiagou52@gmail.com?subject=${subject}&body=${body}`;
+      return;
+    }
+
     const response = await fetch(form.action, {
       method: "POST",
       body: new FormData(form),
